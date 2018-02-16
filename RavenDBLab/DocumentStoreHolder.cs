@@ -9,6 +9,14 @@ namespace RavenDBLab
 {
     public static class DocumentStoreHolder
     {
+        /*
+        Removed ConnectionStringName
+        As the configuration system has been changed in .NET Core,
+        we removed the ConnectionStringName property. 
+        Instead you can use the .NET core configuration mechanism, 
+        retrieve the connection string entry from appsettings.json, 
+        convert it, and manually set Urls and Database properties.
+        */
         private static readonly Lazy<IDocumentStore> LazyStore =
             new Lazy<IDocumentStore>(() =>
             {
