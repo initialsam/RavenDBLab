@@ -11,14 +11,7 @@ namespace RavenDBLab
     {
         static void Main(string[] args)
         {
-            var documentStore = new DocumentStore
-            {
-                Urls = new string[] { "http://localhost:8080" },
-                Database = "Northwind"
-            };
-
-            documentStore.Initialize();
-            using (var session = documentStore.OpenSession())
+            using (var session = DocumentStoreHolder.Store.OpenSession())
             {
                 var p = session.Load<Product>("products/1-A");
                 System.Console.WriteLine(p.Name);
