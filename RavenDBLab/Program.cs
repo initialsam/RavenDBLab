@@ -16,7 +16,8 @@ namespace RavenDBLab
             //Unit1Lesson4.Demo();
             //Unit1Lesson5.Demo();
             //Unit1Lesson6.Exercise1();
-            Unit1Lesson6.Exercise2();
+            //Unit1Lesson6.Exercise2();
+            Unit2Lesson1.Exercise1();
         }
     }
 }
